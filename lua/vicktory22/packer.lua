@@ -63,4 +63,6 @@ return require('packer').startup(function(use)
     use('tpope/vim-surround')
     use('tpope/vim-commentary')
 
+    -- THEMES
+    use('sainnhe/sonokai')
 end)
