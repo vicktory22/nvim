@@ -65,4 +65,5 @@ return require('packer').startup(function(use)
 
     -- THEMES
     use('sainnhe/sonokai')
+    use('helbing/aura.nvim')
 end)
