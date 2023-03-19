@@ -67,4 +67,6 @@ return require('packer').startup(function(use)
     use('sainnhe/sonokai')
     use('helbing/aura.nvim')
     use('yonlu/omni.vim')
+    use('glepnir/zephyr-nvim')
+
 end)
