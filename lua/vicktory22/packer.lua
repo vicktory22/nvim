@@ -23,7 +23,6 @@ return require('packer').startup(function(use)
     use('nvim-treesitter/playground')
     use('theprimeagen/harpoon')
     use('mbbill/undotree')
-    use('tpope/vim-fugitive')
 
     use {
         'VonHeikemen/lsp-zero.nvim',
@@ -48,6 +47,14 @@ return require('packer').startup(function(use)
         }
     }
 
+    use('mfussenegger/nvim-dap')
+    use { 'mxsdev/nvim-dap-vscode-js', requires = {'mfussenegger/nvim-dap'} }
+    use {
+      'microsoft/vscode-js-debug',
+      opt = true,
+      run = 'npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out'
+    }
+
     use('dracula/vim')
     use('github/copilot.vim')
 
@@ -66,7 +73,10 @@ return require('packer').startup(function(use)
     -- THEMES
     use('sainnhe/sonokai')
     use('helbing/aura.nvim')
-    use('yonlu/omni.vim')
     use('glepnir/zephyr-nvim')
+    use('ajmwagar/vim-deus')
+    use('habamax/vim-saturnite')
+    use('savq/melange-nvim')
+    use('AlexvZyl/nordic.nvim')
 
 end)
