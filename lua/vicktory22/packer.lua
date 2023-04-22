@@ -23,6 +23,7 @@ return require('packer').startup(function(use)
     use('nvim-treesitter/playground')
     use('theprimeagen/harpoon')
     use('mbbill/undotree')
+    use('lewis6991/gitsigns.nvim')
 
     use {
         'VonHeikemen/lsp-zero.nvim',
