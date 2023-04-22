@@ -8,8 +8,19 @@ local lsp = require('lsp-zero').preset({
 -- (Optional) Configure lua language server for neovim
 lsp.nvim_workspace()
 
+lsp.configure('denols', {
+    root_dir = require('lspconfig.util').root_pattern({'deno.json'})
+})
+
 lsp.on_attach(function(client, bufnr)
 	local opts = {buffer = bufnr, remap = false}
+
+  if require('lspconfig.util').root_pattern({ 'deno.json' })(vim.fn.getcwd()) then
+    if client.name == "tsserver" then
+      client.stop()
+      return
+    end
+  end
 
 	vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
 	vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
@@ -22,5 +33,6 @@ lsp.on_attach(function(client, bufnr)
 	vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
 	vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 end)
+
 
 lsp.setup()
