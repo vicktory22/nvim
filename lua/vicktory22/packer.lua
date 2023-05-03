@@ -56,7 +56,6 @@ return require('packer').startup(function(use)
       run = 'npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out'
     }
 
-    use('dracula/vim')
     use('github/copilot.vim')
 
     use({
@@ -72,6 +71,7 @@ return require('packer').startup(function(use)
     use('tpope/vim-commentary')
 
     -- THEMES
+    use('dracula/vim')
     use('sainnhe/sonokai')
     use('helbing/aura.nvim')
     use('glepnir/zephyr-nvim')
