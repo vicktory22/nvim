@@ -73,5 +73,6 @@ return require('packer').startup(function(use)
     use('habamax/vim-saturnite')
     use('savq/melange-nvim')
     use('AlexvZyl/nordic.nvim')
+    use('catppuccin/nvim');
 
 end)
