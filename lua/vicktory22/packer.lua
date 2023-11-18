@@ -20,7 +20,6 @@ return require('packer').startup(function(use)
 
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
-    use('nvim-treesitter/playground')
     use('theprimeagen/harpoon')
     use('mbbill/undotree')
     use('tpope/vim-fugitive')
@@ -63,6 +62,7 @@ return require('packer').startup(function(use)
 
     use('tpope/vim-surround')
     use('tpope/vim-commentary')
+    use('folke/twilight.nvim')
 
     -- THEMES
     use('dracula/vim')
@@ -73,6 +73,5 @@ return require('packer').startup(function(use)
     use('habamax/vim-saturnite')
     use('savq/melange-nvim')
     use('AlexvZyl/nordic.nvim')
-    use('catppuccin/nvim');
-
+    use('catppuccin/nvim')
 end)
